@@ -25,6 +25,8 @@ Realizar un sitio web utilizando HTML5 y CSS3 con las siguientes característica
     - Gradientes
     - Filtros
     - Cursores/Puntero
+
+
 La maquetación y la colocación de elementos se hará mediante flexbox y grid. 
 Se puede utilizar “lorem ipsum” en los párrafos, pero no en los títulos. 
 Utiliza metodología BEM.
