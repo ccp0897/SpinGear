@@ -1,0 +1,450 @@
+/* GLOBAL STYLE */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    border: 0;
+    outline: 0; 
+    scroll-behavior: smooth;
+    text-decoration: none;
+    list-style: none;
+}
+/*Variables globales para colores*/
+:root{
+    --principal: #34495E;
+    --terciario: #EB980E;
+    --degradados: #AB7B2B;
+    --blanco: white;
+    --negro: black;
+    --gris: #F9F9F9;
+}
+
+/*Estilo para todo el cuerpo*/
+body{
+    width: 80%;
+    max-width: 1440px;
+    margin: 0 auto;
+    /* border: solid; */
+    background: linear-gradient(circle, var(--gris), var(--principal));
+}
+
+/*HEADER STYLE*/
+
+header{
+    width: 100%;
+    background: radial-gradient(circle, rgba(52,73,94,0.8) 30%, rgba(52,73,94,0.8) 46%);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.header__content{
+    width: 100%;
+    height: auto;
+    background-image: url('../img/logo.png');
+    /* border: solid; */
+    background-size: 6rem;
+    background-position: left ;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+/*Menú de navegacion */
+.menu {
+    width: 60%;
+    padding: .5rem;
+    /* border: solid; */
+}
+#menu__icon{
+    display: none;
+}
+.menu__list{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* border: solid; */
+}
+.menu__item{
+    width: 25%;
+    /* border: solid; */
+    text-align: center;
+    padding: 1rem;
+}
+.menu__item .menu__link{
+    color: var(--blanco);
+    transition: color 0.3s;
+}
+.menu__link:hover {
+    color: var(--terciario);
+}
+.header__icons{
+    width: 25%;
+    color: var(--blanco);
+    /* border: solid; */
+    text-align: right;
+    padding-right: 1rem;
+}
+.header__icons i:hover{
+    color: var(--terciario);
+    cursor: pointer;
+}
+.header__icons i{
+    margin-right: 1rem;
+}
+
+/*LANDING PAGE*/
+/*Comienzo de la seccion de la capa de presentacion de la pagina*/
+
+.main__section-landing{
+    height: 80vh;
+    /* border: solid; */
+    background-image: url('../img/bg_landing.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-landing__title{
+    color: var(--terciario);
+    font-size: 5rem;
+    text-align: center;
+}
+.section-landing__parrafo{
+    color: var(--blanco);
+    font-size: 2rem;
+    text-align: center;
+}
+.section-landing__link{
+    width: 10%;
+    /* border: solid; */
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    border-radius: 1rem;
+    color: var(--terciario);
+    background: radial-gradient(circle, var(--principal),  var(--degradados) 71%);
+    transition: color 0.3s;
+    cursor: pointer;
+}
+
+.section-landing__link:hover{
+    color: var(--principal);
+    background: radial-gradient(circle, var(--degradados),  var(--terciario));
+    transition: color 0.3s;
+}   
+
+/*Seccion de servicios ofrecidos*/
+/*Se trata de un grid con tres columnas*/
+
+.main__section-services, .main__section-bargains, .main__section-contact{
+    /* height: auto; */
+    width: 100%;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-services__title, .section-bargains__title, .section-contact__title{
+    font-size: 2rem;
+    color: var(--principal);
+    width: 100%;
+    border-bottom: 1px solid var(--principal);
+    border-radius: 1rem;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.8);
+    text-align: center;
+}
+.section-services__title span, .section-bargains__title span, .section-contact__title span{
+    color: var(--terciario);
+}
+
+/*Contenedor con display grid de una sola fila y tres columnas con auto fill*/
+.section-services__grid{
+    width: 100%;
+    padding: 1rem;
+    padding-top: 2rem;
+    height: auto;
+    background-image: url('../img/bg_mountain.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-rows: 40vh;
+    gap: 2rem;
+    /* border: solid; */
+}
+.grid__accesorios{
+    /* border: solid; */
+    background-image: url('../img/bici1.jpg');
+}
+.grid__bikes{
+    /* border: solid; */
+    background-image: url('../img/bici2.jpg');
+}
+.grid__arreglos{
+    /* border: solid; */
+    background-image: url('../img/bici1.jpg');
+}
+/*Hacer cada elemento del grid con un display flex que coloque los elementos en columna*/
+.grid__accesorios, .grid__arreglos, .grid__bikes{
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 40vh;
+}
+
+.grid__parrafo{
+    font-size: 3rem;
+    color: var(--terciario);
+}
+.grid__accesorios i, .grid__bikes i, .grid__arreglos i{
+    font-size: 3rem;
+    color: var(--degradados);
+}
+/*Cuando se pase por encima que se pueda ver que se puede pulsar*/
+.grid__accesorios:hover, .grid__bikes:hover, .grid__arreglos:hover{
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.8);
+    cursor: pointer;
+}
+
+/*Seccion de nuevas ofertas, muy similar a la seccion de servicios */
+.section-bargains__grid{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-rows: minmax(40vh, 1fr);
+    gap: 2rem;
+    padding: 1rem;
+    padding-top: 2rem;
+    height: auto;
+    /* border: solid; */
+}
+.grid__bargain{
+    /* border: solid; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    box-shadow: 2px 2px 2px rgba(52,73,94,0.8);
+}
+.grid__bargain div{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 1rem;
+}
+.grid__bargain div p{
+    display: inline-block;
+    width: 60%;
+    text-align: left;
+    font-size: 1rem;
+    font-weight: bold;
+    /* border: solid; */
+}
+
+.grid__bargain div a{
+    border-radius: 1rem;
+    background-color: var(--principal);
+    color: var(--terciario);
+    border: solid;
+    padding: .5rem;
+    align-items: right;
+    width: 20%;
+    text-align: center;
+
+}
+.grid__bargain div a:hover{
+    color: var(--principal);
+    background-color: var(--degradados);
+}
+.grid__bargain img{
+    width: 100%;
+}
+
+/*Sección de contactame*/
+/*Se usa flex para colocar los elementos del formulario*/
+.main__section-contact form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem 0;
+    text-align: center;
+    /* border: solid; */
+    padding: 1rem;
+    background-image: url('../img/bg_other.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.main__section-contact form .form__box input, .main__section-contact form textarea{
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    color: var(--terciario);
+    background-color: var(--principal);
+    border-radius: 1rem;
+    border: 2px solid;
+    margin: 0.5rem 0;
+    resize: none;
+}
+
+.form__btn{
+    display: inline-block;
+    padding: 0.5rem 2rem;
+    background: var(--principal);
+    border-radius: 3rem;
+    font-size: 1.2rem;
+    color: var(--terciario);
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    transition: 0.5s ease;
+    text-decoration: none;
+}
+
+.form__btn:hover{
+    transform: scale(1.1);
+    color:var(--gris);
+    box-shadow: 0 0 25px var(--principal),
+                0 0 50px var(--principal),
+                0 0 100px var(--principal);
+    
+    
+}
+
+/*FOOTER*/
+/*Estilos para el foote siendo un display flex*/
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    margin-top: 1rem;
+    background: radial-gradient(circle, rgba(52,73,94,0.8) 30%, rgba(52,73,94,0.8) 46%);
+    color: var(--gris);
+}
+
+
+.footer__copyright{
+    margin-bottom: 1rem;
+    /* border: solid; */
+}
+.footer__logo img{
+    width: 20%;
+}
+.footer__logo{
+    text-align: center;
+    /* border: solid; */
+}
+.footer__social{
+    margin-bottom: 1rem;
+}
+.footer__social i:hover{
+    color: var(--terciario);
+    cursor: pointer;
+}
+/*Responsive para tablet, tan solo modificar pequeñas cosas como tamaños de letras y los grids*/
+@media (max-width: 900px){
+
+    .section-landing__title{
+        font-size: 4rem;
+        text-align: center;
+    }
+    .section-landing__parrafo{
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    .section-landing__link{
+        width: 20%;
+        /* border: solid; */
+        font-size: 1rem;
+    }
+    .footer__copyright{
+        width: 35%;
+        margin-bottom: 0.5rem;
+        /* border: solid; */
+    }
+    .footer__social{
+        width: 20%;
+        margin-bottom: 0.5rem;
+    }
+    .main__section-contact form .form__box input, .main__section-contact form textarea{
+        margin: 0.4rem 0;
+    }
+    .menu{
+        display: none;
+    }
+    #menu__icon{
+        display: inline;
+    }
+    .header__icons{
+        width: 40%;
+    }
+    .header__content{
+        height: 12vh;
+    }
+}
+
+@media (max-width: 400px) {
+    .header__icons{
+        width: 50%;
+    }
+    .section-landing__title{
+        font-size: 2rem;
+    }
+    .section-landing__parrafo{
+        font-size: 1rem;
+        text-align: center;
+    }
+    .section-landing__link{
+        width: 40%;
+        /* border: solid; */
+        font-size: 0.8rem;
+        text-align: center;
+        padding: 1rem;
+        margin-top: 2rem;
+        border-radius: 1rem;
+        color: var(--terciario);
+        background: radial-gradient(circle, var(--principal),  var(--degradados) 71%);
+        transition: color 0.3s;
+        cursor: pointer;
+    }
+    .footer__copyright{
+        width: 65%;
+        margin-bottom: 0.5rem;
+        /* border: solid; */
+    }
+    .footer__social{
+        width: 60%;
+        margin-bottom: 0.5rem;
+        text-align: center;
+    }
+    .main__section-contact form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        margin: 1rem 0;
+        text-align: center;
+        /* border: solid; */
+        padding: 1rem;
+        background-image: url('../img/bg_other.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}

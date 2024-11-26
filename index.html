@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SpinGear</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+    />
+  </head>
+  <body>
+    <!-- Cabecera -->
+    <header class="header">
+      <div class="header__content">
+        
+        <!-- Menú -->
+        <nav class="menu">
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a href="#inicio" class="menu__link">Home</a>
+            </li>
+            <li class="menu__item">
+              <a href="#services" class="menu__link">Services</a>
+            </li>
+            <li class="menu__item">
+              <a href="#ofertas" class="menu__link">Bargains</a>
+            </li>
+            <li class="menu__item">
+              <a href="#contacto" class="menu__link">Contact</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__icons">
+          <i class="bx bx-search"></i>
+          <i class="bx bxs-cart"></i>
+          <i class="bx bx-log-in"></i>
+          <i class="bx bx-menu" id="menu__icon"></i>
+        </div>
+      </div>
+    </header>
+    <main class="main__content">
+      <section id="inicio" class="main__section-landing">
+        <h2 class="section-landing__title">Enjoy The Way</h2>
+        <p class="section-landing__parrafo">
+          Loren ipsum loren ipsum loren ipsum loren ipsum
+        </p>
+        <a class="section-landing__link" href="#">More</a>
+      </section>
+      <section id="services" class="main__section-services">
+        <h2 class="section-services__title">Our <span>Services</span></h2>
+        <div class="section-services__grid">
+          <div class="grid__accesorios">
+            <p class="grid__parrafo">Accesorios</p>
+            <i class="bx bxs-cog"></i>
+          </div>
+          <div class="grid__bikes">
+            <p class="grid__parrafo">Bicis</p>
+            <i class="bx bxs-store-alt bx-tada"></i>
+          </div>
+          <div class="grid__arreglos">
+            <p class="grid__parrafo">Arreglos</p>
+            <i class="bx bxs-analyse bx-spin"></i>
+          </div>
+        </div>
+      </section>
+      <section id="bargains" class="main__section-bargains">
+        <h2 class="section-bargains__title">New <span>Bargains</span></h2>
+        <div class="section-bargains__grid">
+          <div class="grid__bargain">
+            <img src="./assets/img/bike1.jpg" />
+            <div>
+              <p class="grid__bargain-parrafo">Bici 1 - 999€</p>
+              <a href="#">
+                <i class="bx bxs-cart-add bx-spin"></i>
+              </a>
+            </div>
+          </div>
+          <div class="grid__bargain">
+            <img src="./assets/img/bike2.jpg" />
+            <div>
+              <p class="grid__bargain-parrafo">Bici 2 - 999€</p>
+              <a href="#">
+                <i class="bx bxs-cart-add bx-spin"></i>
+              </a>
+            </div>
+          </div>
+          <div class="grid__bargain">
+            <img src="./assets/img/bike3.jpg" />
+            <div>
+              <p class="grid__bargain-parrafo">Bici 3 - 999€</p>
+              <a href="#">
+                <i class="bx bxs-cart-add bx-spin"></i>
+              </a>
+            </div>
+          </div>
+          <div class="grid__bargain">
+            <img src="./assets/img/bike4.jpg" />
+            <div>
+              <p class="grid__bargain-parrafo">Bici 4 - 999€</p>
+              <a href="#">
+                <i class="bx bxs-cart-add bx-spin"></i>
+              </a>
+            </div>
+          </div>
+          <div class="grid__bargain">
+            <img src="./assets/img/bike5.jpg" />
+            <div>
+              <p class="grid__bargain-parrafo">Bici 5 - 999€</p>
+              <a href="#">
+                <i class="bx bxs-cart-add bx-spin"></i>
+              </a>
+            </div>
+          </div>
+          <div class="grid__bargain">
+            <img src="./assets/img/bike6.jpg" />
+            <div>
+              <p class="grid__bargain-parrafo">Bici 6 - 999€</p>
+              <a href="#">
+                <i class="bx bxs-cart-add bx-spin"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="contact" class="main__section-contact">
+        <h2 class="section-contact__title"><span>Contact</span> Us</h2>
+        <form action="" class="section-contact__form">
+          <div class="form__personal">
+            <div class="form__box">
+              <input type="text" placeholder="Full Name" />
+              <input type="email" placeholder="Email" />
+            </div>
+            <div class="form__box">
+              <input type="number" placeholder="Phone Number" />
+              <input type="text" placeholder="Subject" />
+            </div>
+          </div>
+          <div class="form__message">
+            <textarea
+              name=""
+              id=""
+              cols="30"
+              rows="10"
+              placeholder="Your Message"
+            ></textarea>
+            <input type="submit" value="Send Message" class="form__btn" />
+          </div>
+        </form>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__logo">
+        <img src="./assets/img/logo.png">
+      </div>
+      <div class="footer__social">
+        <i class='bx bxl-linkedin-square' ></i>
+        <i class='bx bxl-github' ></i>
+        <i class='bx bxl-instagram-alt' ></i>
+        <i class='bx bxl-twitter' ></i>
+        <i class='bx bxl-tiktok' ></i>
+      </div>
+      <div class="footer__copyright">
+        <p>&copy; Cristian Cabrera Pinto</p>
+      </div>
+      
+    </footer>
+  </body>
+</html>
